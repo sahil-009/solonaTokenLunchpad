@@ -56,7 +56,7 @@ export function TokenLaunchpad() {
                     updateAuthority: wallet.publicKey,
                 }),
             );
-
+            
             transaction.feePayer = wallet.publicKey;
             transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
             transaction.partialSign(mintKeypair);
